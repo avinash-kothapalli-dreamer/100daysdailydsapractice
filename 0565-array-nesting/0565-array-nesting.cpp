@@ -8,14 +8,16 @@ public:
         
         
         for(int i=0;i<n;i++){
-            if(!visited[i]){
+            if(nums[i] != INT_MAX){
                 int count = 0,start = nums[i];
                 do{
-                    visited[start] =true;
+                    int temp = start;
                     start = nums[start];
+                    nums[temp] = INT_MAX;
+                    
                     count++;
                     
-                }while(start != nums[i]);
+                }while(nums[start] != INT_MAX);
                 
                 res = max(res,count);
             }
