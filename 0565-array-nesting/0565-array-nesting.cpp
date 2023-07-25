@@ -11,10 +11,11 @@ public:
             if(!visited[i]){
                 int count = 0,start = nums[i];
                 do{
-                    count++;
+                    visited[start] =true;
                     start = nums[start];
-                    visited[start] = true;
-                }while(nums[i] !=start);
+                    count++;
+                    
+                }while(start != nums[i]);
                 
                 res = max(res,count);
             }
