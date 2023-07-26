@@ -10,6 +10,7 @@ public:
         for(int i=0;i<n;i++){
             if(nums[i] != INT_MAX){
                 int count = 0,start = nums[i];
+                nums[i] = INT_MAX;
                 do{
                     int temp = start;
                     start = nums[start];
@@ -17,7 +18,7 @@ public:
                     
                     count++;
                     
-                }while(nums[start] != INT_MAX);
+                }while(start != INT_MAX);
                 
                 res = max(res,count);
             }
