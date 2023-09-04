@@ -20,8 +20,8 @@ public:
     }
     
     int getKthAncestor(int node, int k) {
-         for (int i = 0; i < 20; i++) {
-            if ((k >> i) & 1) {
+         for (int i = 0; (1<<i) <=k; i++) {
+            if ((1<<i)&k) {
                 node = v[node][i];
                 if (node == -1) return -1;
             }
