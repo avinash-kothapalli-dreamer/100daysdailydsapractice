@@ -63,7 +63,7 @@ public:
     void put(int key, int value) {
         if(mpp.find(key) != mpp.end()){
            deletenode(mpp[key]);
-            mpp.erase(key);
+            //mpp.erase(key);
         }else if(mpp.size()==cap){
              mpp.erase(tail->prev->key);
             deletenode(tail->prev);
