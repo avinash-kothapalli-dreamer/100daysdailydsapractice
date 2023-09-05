@@ -50,7 +50,7 @@ public:
              addnode(mpp[key]);
             //mpp.erase(key);
            
-            mpp[key] = head->next;
+           // mpp[key] = head->next;
             
             return ans;
         
