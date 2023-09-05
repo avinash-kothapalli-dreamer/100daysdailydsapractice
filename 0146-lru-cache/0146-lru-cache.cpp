@@ -48,7 +48,7 @@ public:
             int ans = ex->val;
             deletenode(mpp[key]);
              addnode(mpp[key]);
-            mpp.erase(key);
+            //mpp.erase(key);
            
             mpp[key] = head->next;
             
