@@ -11,11 +11,12 @@ public:
         int ind = -1;
         for(int i=n-1;i>=0;i--){
             if(vec[n].Start>=vec[i].End){
-               return i;
+                ind = i;
+                break;
             }
         }
         
-        return -1;
+        return ind;
     }
     
     int f(vector<Job> & vec,int n){
@@ -44,5 +45,5 @@ public:
         memset(dp,-1,sizeof(dp));
         
         return f(vec,vec.size()-1);
-    }
+    }
 };
