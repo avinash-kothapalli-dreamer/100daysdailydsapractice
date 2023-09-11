@@ -11,12 +11,11 @@ public:
         int ind = -1;
         for(int i=n-1;i>=0;i--){
             if(vec[n].Start>=vec[i].End){
-                ind = i;
-                break;
+               return i;
             }
         }
         
-        return ind;
+        return -1;
     }
     
     int f(vector<Job> & vec,int n){
